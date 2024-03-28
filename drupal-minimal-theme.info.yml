@@ -1,0 +1,15 @@
+name: 'Drupal Minimal Theme'
+type: theme
+description: 'A minimal Drupal theme using Tailwind CSS and TypeScript.'
+core_version_requirement: ^8 || ^9
+package: Custom
+
+libraries:
+  - drupal-minimal-theme/global-styling
+
+regions:
+  header: 'Header'
+  content: 'Content'
+  footer: 'Footer'
+
+base theme: false
