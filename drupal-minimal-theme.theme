@@ -12,3 +12,15 @@ function drupal_minimal_theme_preprocess_page(&$variables) {
   // Add a body class for the current theme.
   $variables['attributes']['class'][] = 'drupal-minimal-theme';
 }
+
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ */
+function my_theme_preprocess_page(&$variables) {
+  // Add variables needed by the header component.
+  $variables['site_name'] = \Drupal::config('system.site')->get('name');
+  $variables['logged_in'] = \Drupal::currentUser()->isAuthenticated();
+  if ($variables['logged_in']) {
+    $variables['user_display_name'] = \Drupal::currentUser()->getDisplayName();
+  }
+}
