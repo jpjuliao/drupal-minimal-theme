@@ -2,6 +2,10 @@
 
 A minimal Drupal theme using Tailwind CSS, TypeScript, and Single Directory Components (SDC).
 
+## Drupal Version
+
+Compatible with Drupal 8 and Drupal 9.
+
 ## Overview
 
 The Drupal Minimal Theme is a lightweight theme designed to provide a clean starting point for Drupal projects. It leverages modern frontend technologies such as Tailwind CSS for styling, TypeScript for enhanced JavaScript functionality, and Single Directory Components (SDC) for component-based development.
