@@ -1,0 +1,6 @@
+- name: "Default Header"
+  template: "components/header/header.twig"
+  context:
+    site_name: "My Drupal Site"
+    logged_in: true
+    user_display_name: "John Doe"
