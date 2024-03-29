@@ -1,6 +1,6 @@
 # Drupal Minimal Theme
 
-A minimal Drupal theme using Tailwind CSS, TypeScript, and Single Directory Components (SDC).
+A minimal Drupal theme using Twig, Tailwind CSS, TypeScript, and Single Directory Components (SDC).
 
 Storybook: https://jpjuliao.github.io/drupal-minimal-theme/
 
@@ -14,6 +14,7 @@ The Drupal Minimal Theme is a lightweight theme designed to provide a clean star
 
 ## Dependencies
 
+- Twig: a flexible and powerful template engine for PHP.
 - Tailwind CSS: A utility-first CSS framework for rapidly building custom designs.
 - TypeScript: A typed superset of JavaScript that compiles to plain JavaScript.
 - Drupal: A free and open-source content management system for building websites and applications.

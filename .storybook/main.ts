@@ -3,6 +3,7 @@ import path from 'path';
 
 const config: StorybookConfig = {
   stories: [
+    "../components/**/*.mdx",
     "../components/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
   addons: [
@@ -28,7 +29,8 @@ const config: StorybookConfig = {
           ],
         },],
       }
-    })
+    }),
+    "@storybook/addon-mdx-gfm"
   ],
   webpackFinal: async (config, { configType }) => {
     // Add twig-loader rule for Twig files
