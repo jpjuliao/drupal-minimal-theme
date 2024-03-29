@@ -2,6 +2,8 @@
 
 A minimal Drupal theme using Tailwind CSS, TypeScript, and Single Directory Components (SDC).
 
+Storybook: https://jpjuliao.github.io/drupal-minimal-theme/
+
 ## Drupal Version
 
 Compatible with Drupal 8 and Drupal 9.
