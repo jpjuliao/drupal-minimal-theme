@@ -1,4 +1,0 @@
-- name: "Default Footer"
-  template: "components/footer/footer.twig"
-  context:
-    year: 2024
