@@ -1,5 +1,5 @@
-import type { StorybookConfig } from "@storybook/html-webpack5";
-import path from 'path'; 
+import { StorybookConfig } from "@storybook/html-webpack5";
+import path from 'path';
 
 const config: StorybookConfig = {
   stories: [
@@ -11,10 +11,26 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
-    "@storybook/addon-mdx-gfm"
+    ({
+      name: "@storybook/addon-styling-webpack",
+
+      options: {
+        rules: [{
+          test: /\.css$/,
+          sideEffects: true,
+          use: [
+            require.resolve("style-loader"),
+            {
+              loader: require.resolve("css-loader"),
+              options: {
+              },
+            },
+          ],
+        },],
+      }
+    })
   ],
   webpackFinal: async (config, { configType }) => {
-
     // Add twig-loader rule for Twig files
     config.module.rules.push({
       test: /\.twig$/,
@@ -24,7 +40,7 @@ const config: StorybookConfig = {
     // Add CSS support
     config.module.rules.push({
       test: /\.css$/,
-      use: ['style-loader', 'css-loader', 'postcss-loader'],
+      use: ['postcss-loader'],
       include: path.resolve(__dirname, '../'),
     });
 
