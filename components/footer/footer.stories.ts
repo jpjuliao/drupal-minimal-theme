@@ -1,4 +1,3 @@
-// Footer.stories.ts
 import { Meta } from '@storybook/html';
 import footerTemplate from './footer.twig'; // Import the Twig template
 

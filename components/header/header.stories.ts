@@ -1,4 +1,3 @@
-// Header.stories.ts
 import { Meta } from '@storybook/html';
 import headerTemplate from './header.twig'; // Import the Twig template
 

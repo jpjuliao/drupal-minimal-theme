@@ -1,0 +1,11 @@
+{# Define classes for different button sizes #}
+{% set sizeClasses = {
+  'small': 'text-sm px-4 py-2',
+  'medium': 'px-4 py-2',
+  'large': 'text-lg px-6 py-3'
+} %}
+
+{# Include any necessary classes and attributes #}
+<button class="bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600 {{ sizeClasses[size] }} {{ buttonClass }}" {{ buttonAttributes }}>
+  {{ buttonLabel }}
+</button>

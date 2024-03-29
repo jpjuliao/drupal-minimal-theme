@@ -26,6 +26,7 @@ const config: StorybookConfig = {
               options: {
               },
             },
+            require.resolve("postcss-loader"),
           ],
         },],
       }
@@ -40,11 +41,11 @@ const config: StorybookConfig = {
     });
 
     // Add CSS support
-    config.module.rules.push({
-      test: /\.css$/,
-      use: ['postcss-loader'],
-      include: path.resolve(__dirname, '../'),
-    });
+    // config.module.rules.push({
+    //   test: /\.css$/,
+    //   use: ['postcss-loader'],
+    //   include: path.resolve(__dirname, '../'),
+    // });
 
     // Return the updated Storybook Webpack config
     return config;
