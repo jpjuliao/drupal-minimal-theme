@@ -1,19 +1,22 @@
-name: Build Storybook
+name: Deploy Storybook
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main ]  # Adjust branch as needed
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Use Node.js 20
+      - name: Use Node.js 20  # Adjust Node.js version if needed
         uses: actions/setup-node@v3
         with:
           node-version: 20
       - name: Install dependencies
         run: npm install
       - name: Build Storybook
-        run: npm run build-storybook
+        run: npm run build-storybook  # Adjust build command if necessary
+      - uses: bitovi/github-actions-storybook-to-github-pages@v1  # Use the action
+        with:
+          output_directory: 'storybook-static'  # Adjust output directory if needed
