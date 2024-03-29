@@ -1,0 +1,20 @@
+meta:
+  title: Header Component
+
+story1:
+  name: Default Header
+  parameters:
+    title: My Website
+  component: ../header/header.twig
+  args:
+    title: My Website
+
+story2:
+  name: Header with Logo
+  parameters:
+    title: My Website
+    logo: path/to/logo.png
+  component: ../header/header.twig
+  args:
+    title: My Website
+    logo: path/to/logo.png
